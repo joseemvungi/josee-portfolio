@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Contact page for inquiries and networking">
+  <meta name="keywords" content="contact, email, phone, web developer">
+  <meta name="author" content="[Your Name]">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>I'd love to hear from you!</h2>
+      <form id="contactForm" onsubmit="return validateContactForm()">
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="message">Your Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="formMsg"></p>
+    </section>
+
+    <section>
+      <h3>Find Me on the Map</h3>
+      <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen loading="lazy" title="My Location"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Josee. Let's build something great together.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

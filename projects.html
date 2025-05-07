@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Projects - Personal Portfolio">
+  <meta name="keywords" content="Web Projects, Portfolio, HTML CSS JS">
+  <meta name="author" content="[Your Name]">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="projects-container">
+    <article class="project">
+      <h2>Project 1</h2>
+      <p>A website built using HTML and CSS.</p>
+      <button onclick="toggleDetails(this)">Show Details</button>
+      <p class="project-details" style="display:none;">
+        This project features a responsive layout with custom styling.  
+        It was designed to help beginners understand the structure of semantic HTML.
+      </p>
+    </article>
+    
+    <article class="project">
+      <h2>Project 2</h2>
+      <p>JavaScript-based interactive site.</p>
+      <button onclick="toggleDetails(this)">Show Details</button>
+      <p class="project-details" style="display:none;">
+        This app includes dynamic content generation and DOM manipulation.  
+        It showcases user interactivity with event handling and form validation.
+      </p>
+    </article>
+
+    <article class="project">
+      <h2>Project 3</h2>
+      <p>Mobile responsive portfolio template.</p>
+      <button onclick="toggleDetails(this)">Show Details</button>
+      <p class="project-details" style="display:none;">
+        Designed with media queries and flexible grids for all screen sizes.  
+        It integrates smooth scrolling and animated transitions for a better UX.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Josee. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDetails(button) {
+      const details = button.nextElementSibling;
+      if (details.style.display === "none") {
+        details.style.display = "block";
+        button.textContent = "Hide Details";
+      } else {
+        details.style.display = "none";
+        button.textContent = "Show Details";
+      }
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
