@@ -27,4 +27,5 @@
    - **Solution**: Followed GitHub's instructions carefully, ensuring all paths were relative and correct.
 
 ## Link to Live Demo
-- [Live Portfolio on GitHub Pages](https://yourusername.github.io/portfolio)
+- [Live Portfolio on GitHub Pages](https://joseemvungi.github.io/josee-portfolio)
+- 
