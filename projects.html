@@ -4,21 +4,141 @@
   <meta charset="UTF-8">
   <meta name="description" content="Projects - Personal Portfolio">
   <meta name="keywords" content="Web Projects, Portfolio, HTML CSS JS">
-  <meta name="author" content="[Your Name]">
+  <meta name="author" content="Josee">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #bbbbbb;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px;
+      gap: 20px;
+    }
+
+    .project {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 30%; 
+      box-sizing: border-box;
+    }
+
+    .project h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .project p {
+      color: #555;
+    }
+
+    .project button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .project button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+    }
+
+    
+    @media (max-width: 1000px) {
+      .project {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .project {
+        width: 100%;
+      }
+    }
+    
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+    background-color: #d77f7f;
+    padding: 20px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  #div1 {
+    width: 95%;
+    font-size: 18px;
+  }
+}
+  </style>
 </head>
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="survey.html">Survey</a></li>
-      </ul>
+      <button id="menu-toggle">&#9776;</button>
+
+        
+        <ul id="nav-links" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="survey.html">Survey</a></li>
+        </ul>
     </nav>
   </header>
 
