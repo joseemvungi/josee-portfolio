@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Personal portfolio of [Your Name]">
-  <meta name="keywords" content="Web Developer, Portfolio, HTML, CSS, JavaScript">
-  <meta name="author" content="[Your Name]">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="description" content="Personal portfolio of Josee Mvungi" />
+  <meta name="keywords" content="Web Developer, Portfolio, HTML, CSS, JavaScript" />
+  <meta name="author" content="Josee Mvungi" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="page">
+  <div id="page" class="page-wrapper">
     <header>
       <nav>
-        <ul>
+      
+        <button id="menu-toggle">&#9776;</button>
+
+        
+        <ul id="nav-links" class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Me</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -21,8 +25,6 @@
           <li><a href="survey.html">Survey</a></li>
         </ul>
       </nav>
-      
-      
     </header>
 
     <main>
@@ -30,19 +32,22 @@
         <section>
           <h2 id="greeting">Hello!</h2>
           <h1>Welcome to My Portfolio</h1>
-          <p>This is the homepage of my personal portfolio where I showcase my skills and projects as a web developer.</p>
-          
+          <p>My name is Josee. This is the homepage of my personal portfolio where I showcase my skills and projects as a web developer.</p>
+
           <h2>My Skills</h2>
           <p>I am proficient in <strong>HTML</strong>, <em>CSS</em>, and <span>JavaScript</span>.</p>
         </section>
       </div>
     </main>
-    <button id="themeToggle" onclick="toggleTheme()">Switch to Dark Mode</button>
+
+    
+    <button id="dark-mode-toggle">Switch to Dark Mode</button>
+
     <footer>
       <p>&copy; 2025 Josee. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
