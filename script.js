@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-  // Greeting based on time of day
+  // Greeting based on time of day (Home page only)
   const greeting = document.getElementById('greeting');
   if (greeting) {
     const hour = new Date().getHours();
@@ -14,30 +14,29 @@ window.addEventListener('DOMContentLoaded', () => {
     greeting.textContent = message;
   }
 
-  // Dark/Light Mode Toggle
-  const modeToggleButton = document.getElementById('dark-mode-toggle');
+  // Apply dark/light mode on all pages
   const body = document.body;
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.add('light-mode');
+  }
 
+  // Only add toggle functionality if button exists (e.g., on home page)
+  const modeToggleButton = document.getElementById('dark-mode-toggle');
   if (modeToggleButton) {
-    // Apply saved theme
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark-mode');
-      modeToggleButton.textContent = 'light';
-    } else {
-      body.classList.add('light-mode');
-      modeToggleButton.textContent = 'dark';
-    }
+    modeToggleButton.textContent = savedTheme === 'dark' ? 'light' : 'dark';
 
-    // Toggle function
-    modeToggleButton.addEventListener('click', function () {
+    modeToggleButton.addEventListener('click', () => {
       if (body.classList.contains('light-mode')) {
         body.classList.replace('light-mode', 'dark-mode');
-        modeToggleButton.textContent = 'light';
         localStorage.setItem('theme', 'dark');
+        modeToggleButton.textContent = 'light';
       } else {
         body.classList.replace('dark-mode', 'light-mode');
-        modeToggleButton.textContent = 'dark';
         localStorage.setItem('theme', 'light');
+        modeToggleButton.textContent = 'dark';
       }
     });
   }
@@ -47,12 +46,11 @@ window.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('nav-links');
 
   if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', function () {
+    menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
 
-    // Close menu when clicking outside
-    window.addEventListener('click', function (e) {
+    window.addEventListener('click', (e) => {
       if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
         navLinks.classList.remove('show');
       }
